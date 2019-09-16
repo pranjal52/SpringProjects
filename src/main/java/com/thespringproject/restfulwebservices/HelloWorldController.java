@@ -8,11 +8,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloWorldController {
 	
+	//initial get
 	@RequestMapping(method=RequestMethod.GET, path="/helloworld")
 	public String helloWorld() {
 		return ("Hello World!");
 	}
 
+	//gets bean
 	@GetMapping( path="/helloworldbean")
 	public HelloWorldBean helloWorldBean() {
 		return new HelloWorldBean("Do you see my message?");
