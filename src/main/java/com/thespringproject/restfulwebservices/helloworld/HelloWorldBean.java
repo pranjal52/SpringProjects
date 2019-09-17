@@ -1,4 +1,4 @@
-package com.thespringproject.restfulwebservices;
+package com.thespringproject.restfulwebservices.helloworld;
 
 public class HelloWorldBean {
 	
