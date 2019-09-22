@@ -8,11 +8,16 @@ import java.util.Date;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 
+import com.fasterxml.jackson.annotation.JsonFilter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 /**
  * User Bean.
  * @author pranjal
  *
  */
+
+@JsonFilter("ID_FILTER")
 public class User {
 
 	private Integer id;
@@ -20,6 +25,8 @@ public class User {
 	@Size(min =2, message="Name should have atleast 2 characters!")
 	private String name;
 	
+	
+	@JsonIgnore
 	@Past(message="Date should be in the past!")
 	private Date birthday;
 	
